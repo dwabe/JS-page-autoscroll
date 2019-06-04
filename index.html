@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+    <title>Płynne przewijanie strony</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+    <!-- <script type="text/javascript" src="js/jquery.min.js"></script> -->
+    <!-- <script type="text/javascript" src="js/functions.js"></script> -->
+</head>
+
+<body>
+
+<div>
+    <a href="#middle" id="top">Scroll down</a>
+</div>
+
+<div>
+    <a href="#bottom" id="middle">Scroll down</a>
+</div>
+
+<div>
+    <a href="#top" id="bottom">Scroll up</a>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>    
+<script>
+    $(document).ready(function() { 
+
+        $('a[href^="#"]').on('click', function(event) {
+
+            var target = $( $(this).attr('href') );
+
+            if( target.length ) {
+                event.preventDefault();
+                $('html, body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+div {
+  width: 100%;
+  height: 100vh;
+}
+
+div a {
+  font-size: 30px;
+  color: rgba(209, 227, 248, 0.904);
+  font-family: sans-serif;
+  text-align: center;
+  text-decoration: none;
+  padding: 20px;
+  display: block;
+  background: none;
+}
+
+div div:nth-child(1) {
+  background: url(../images/1.jpg) no-repeat center;
+  background-size: cover;
+}
+
+div div:nth-child(2) {
+  background: url(../images/2.jpg) no-repeat center;
+  background-size: cover;
+}
+
+div div:nth-child(3) {
+  background: url(../images/3.jpg) no-repeat center;
+  background-size: cover;
+}
+/*# sourceMappingURL=style.css.map */
